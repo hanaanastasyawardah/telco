@@ -1,0 +1,31 @@
+# ------------------------------------
+# 1. DEPENDENCIES (Folder yang dihasilkan oleh package manager)
+# ------------------------------------
+# Node.js dependencies
+/node_modules
+
+# Jika menggunakan paket dari Yarn
+/yarn-error.log
+
+# Jika ada berkas cache NPM
+/npm-debug.log
+
+# ------------------------------------
+# 2. ENVIRONMENT & SECRETS (Informasi Sensitif)
+# ------------------------------------
+# Berkas environment variable (berisi kunci rahasia/database)
+.env
+.env.local
+.env.development
+.env.test
+
+# ------------------------------------
+# 3. BUILD & LOGS (Berkas yang dihasilkan saat proses build/run)
+# ------------------------------------
+# Log files
+*.log
+/logs
+
+# Jika Anda memiliki folder hasil kompilasi
+/dist
+/build
