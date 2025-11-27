@@ -1,0 +1,29 @@
+# ------------------------------------
+# 1. PYTHON ARTIFACTS
+# ------------------------------------
+# Byte-code files
+__pycache__/
+*.pyc
+
+# Virtual environment (SANGAT PENTING untuk mengecualikan 'venv')
+# Folder ini berisi ribuan dependency yang besar.
+/venv
+
+# ------------------------------------
+# 2. ML MODELS AND DATA ARTIFACTS
+# ------------------------------------
+# Mengecualikan model/scaler/data yang disimpan (pkl, npy)
+# Berkas ini umumnya berukuran besar dan harus di-generate ulang
+# saat deployment, bukan di-versioning.
+*.pkl
+*.npy
+
+# ------------------------------------
+# 3. ENVIRONMENT VARIABLES & LOGS
+# ------------------------------------
+# Environment variables (berisi kunci rahasia/konfigurasi)
+.env
+.env.*
+
+# Logs and debug files
+*.log
