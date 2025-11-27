@@ -1,29 +1,42 @@
 # ------------------------------------
-# 1. PYTHON ARTIFACTS
+# 1. DEPENDENCIES & ARTIFACTS
 # ------------------------------------
-# Byte-code files
+
+# Node.js dependencies
+/node_modules
+/npm-debug.log
+/yarn-error.log
+
+# Python Virtual Environment
+# SANGAT PENTING: Mengecualikan folder lingkungan virtual
+/venv
+
+# Python Byte-code
 __pycache__/
 *.pyc
-
-# Virtual environment (SANGAT PENTING untuk mengecualikan 'venv')
-# Folder ini berisi ribuan dependency yang besar.
-/venv
 
 # ------------------------------------
 # 2. ML MODELS AND DATA ARTIFACTS
 # ------------------------------------
-# Mengecualikan model/scaler/data yang disimpan (pkl, npy)
-# Berkas ini umumnya berukuran besar dan harus di-generate ulang
-# saat deployment, bukan di-versioning.
+
+# Berkas model dan data serialisasi berukuran besar
 *.pkl
 *.npy
+*.h5
+*.onnx
 
 # ------------------------------------
-# 3. ENVIRONMENT VARIABLES & LOGS
+# 3. ENVIRONMENT & SECRETS
 # ------------------------------------
-# Environment variables (berisi kunci rahasia/konfigurasi)
+
+# Berkas environment variables (berisi kunci rahasia/database)
 .env
-.env.*
+.env.local
+.env.development
+.env.test
 
-# Logs and debug files
-*.loggit add .gitignore
+# Logs and build files
+*.log
+/logs
+/dist
+/build
